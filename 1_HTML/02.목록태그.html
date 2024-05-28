@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>목록태그</title>
+</head>
+<body>
+    <!-- ul (Unordered List) -->
+    <h2>ul : 순서 없는 목록 태그</h2>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <h3>중첩으로 가능</h3>
+    <ul>
+        <li>HTML<!-- ul>li*2 --></li>
+        <ul>
+            <li>글자태그</li>
+            <li>목록태그</li>
+        </ul>
+        <li>CSS
+            <ul>
+                <li>글자태그</li>
+                <li>목록태그</li>
+            </ul>
+        </li>
+        <li>JavaScript
+            <ul>
+                <li>글자태그</li>
+                <li>목록태그</li>
+            </ul>
+        </li>
+    </ul>
+    
+
+    <!-- ol (Ordered List) -->
+    <h2>ol : 순서 있는 목록태그</h2>
+    <!-- ol>li*3 -->
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+
+    <!-- 
+        -start : 항목의 시작 번호 변경(기본값 : 1)
+        -type : 항목 앞에 표시되는 숫자의 종류 변경
+        -reversed : 항목을 역순으로 표시 (속성값 X)
+    -->
+    <ol start="5" type="I" reversed>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+
+    <hr>
+    <h2>dl : 설명과 관련된 목록 태그 (주로 용어에 대해 정의 할때)</h2>
+    <!--
+        -dl(Description List) : 정의 목록
+        -dt(Detinition Term) : 목록에 대한 정의
+        -dd(Detinition Description) : 정의 목록의 항목
+    -->
+    <dl>
+        <dt>HTML5</dt>
+        <dd>HTML5는 웹에서 정보를 표현할 목적으로 만든 마크업 언어다.</dd>
+        <dt>CSS3</dt>
+        <dd>HTML5와 함께 웹 표준의 하나다.</dd>
+        <dd>미리 약속된 스타일 속성을 사용해서 레이아웃과 스타일을 정의한다.</dd>
+    </dl>
+
+
+</body>
+</html>
