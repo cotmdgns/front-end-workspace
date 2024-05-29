@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>테이블 태그</title>
+  </head>
+  <body>
+    <h1>기본적인 표 만들기</h1>
+    <table border="1">
+      <tr>
+        <td>브라우저명</td>
+        <td>제조사</td>
+        <td>홈페이지</td>
+      </tr>
+      <tr>
+        <td>Chrome</td>
+        <td>Google</td>
+        <td>http://google.com/</td>
+      </tr>
+      <tr>
+        <td>Safari</td>
+        <td>Apple</td>
+        <td>http://Apple.com/</td>
+      </tr>
+    </table>
+
+    <h2>표의 행과 열을 합치는 속성</h2>
+
+    <table border="1">
+      <tr>
+        <td rowspan="2" width="80" height="80">사진</td>
+        <td>이름</td>
+        <td>루비바오&후이바오</td>
+      </tr>
+      <tr>
+        <td>연락처</td>
+        <td>010-1234-5678</td>
+      </tr>
+      <tr>
+        <td colspan="2" height="30">주소</td>
+        <td>경기도 용인 에버랜드 판다월드</td>
+      </tr>
+      <tr>
+        <td colspan="2" height="60">자기소개</td>
+        <td>우리는 개발자를 꿈꾸다 판다! 할 수 있지~~</td>
+      </tr>
+    </table>
+
+    <h2>테이블 내에 구조 나누기</h2>
+    <table border="1">
+      <caption>
+        바오패밀리 친구들
+        <thead>
+          <tr>
+            <th>이름</th>
+            <th>나이</th>
+            <th>주소</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>코식이</td>
+            <td>33</td>
+            <td>경기도 용인</td>
+          </tr>
+          <tr>
+            <td>제돌이</td>
+            <td>11</td>
+            <td>제주도</td>
+          </tr>
+          <tr>
+            <td>세로</td>
+            <td>4</td>
+            <td>서울 광진구</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th colspan="2">총 마리 수</th>
+            <td>3</td>
+          </tr>
+        </tfoot>
+      </caption>
+    </table>
+  </body>
+</html>
