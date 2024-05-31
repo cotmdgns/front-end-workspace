@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>시맨틱 태그</title>
+  </head>
+  <body>
+    <h2>레이아웃 1 : div</h2>
+    <div id="header">
+      <h1>LOGO</h1>
+      <div>GNB</div>
+    </div>
+    <div id="main">Main</div>
+    <div id="section">
+      <div id="article1" class="article"></div>
+      <div id="article2" class="article"></div>
+    </div>
+    <div id="aside">Ads</div>
+    <div id="footer">Footer</div>
+
+    <h2>레이아웃 2 : Semantic Tag</h2>
+    <!--
+        header
+        - 페이지의 독자적인 요소
+        - 로고, GNB 등
+        - 주로 페이지 안내(이동)에 관한 요소 포함
+    -->
+    <header>
+      <h1>LOGO</h1>
+      <!--
+        nav
+        - 페이지 링크, 내부 링크가 있는 영역에 사용
+        - 메인 내비게이션에서 사용
+      -->
+      <nav>GNB</nav>
+    </header>
+    <!--
+        main
+        - 주요 내용 정의
+        - 페이지 내에 한 번만 사용
+        - LNB : Local Navigation Bar - 사이드 메뉴
+    -->
+    <main>Main</main>
+    <!--
+        section
+        - 단락, 이미지, 제목 등 콘텐츠를 묶어서 구성할 때 사용
+        - class나 id 속성을 사용하여 영역을 구분
+    -->
+    <section>
+      <!--
+            article
+            - 페이지 내용상 별개 내용을 구성할 때 사용
+            - section 대신 사용해도 무방
+        -->
+      <article id="article1"></article>
+      <article id="article2"></article>
+    </section>
+    <!-- 
+        aside
+        - 본문 내용에 대한 추가적인 설명
+        - 부수적인 콘텐츠 표시에 사용
+    -->
+    <aside>Ads</aside>
+    <!--
+        footer
+        - 회사 정보나 사이트에 대한 정보
+        - 저작권, 개인정보 보호정책, 연락처, 관리자 정보, 카피라이트 등
+    -->
+    <footer>Footer</footer>
+  </body>
+</html>
