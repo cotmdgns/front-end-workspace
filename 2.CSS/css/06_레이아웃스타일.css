@@ -1,0 +1,179 @@
+.size-test {
+  height: 200px;
+  background-color: cadetblue;
+}
+#fixed-size {
+  width: 200px;
+}
+#variable-size {
+  width: 50%;
+}
+.space {
+  width: 100px;
+  height: 100px;
+  background-color: beige;
+  /* box-sizing: border-box; */
+  margin: 10px;
+}
+#padding1 {
+  padding: 10px;
+}
+#padding2 {
+  /*padding-top (상),botoom(하),left(좌),right(우)*/
+  padding-top: 50px;
+  padding-right: 100px;
+
+  /* 상/하 : 50px, 좌/우 : 30px */
+  padding: 50px 30px;
+
+  /* 상 : 30px, 우 : 50px, 하 : 20px, 좌 : 40px */
+  padding: 30px 50px 20px 40px;
+}
+#margin1 {
+  margin: 50px;
+}
+#margin2 {
+  margin-top: 60;
+  margin: 50px 30px;
+  margin: 30px 50px 20px 40px;
+}
+/* border : width style color */
+.border {
+  width: 100px;
+  height: 100px;
+  /* solid : 테두리를 실선으로 표시 */
+  border: 10px solid gold;
+}
+
+#border1 {
+  /* dotted : 테두리를 점선으로 표시 */
+  border-style: dotted;
+}
+#border2 {
+  /* dashed : 테두리를 짧은 선으로 표시 */
+  border-style: dashed;
+  border-color: hotpink;
+  border-color: hotpink yellow;
+  border-right-color: blue;
+}
+#border3 {
+  /* double : 테두리를 이중선으로 표시 */
+  border-style: double;
+  /* border-radius : 테두리를 모서리를 둥글게 지정하는 속성 */
+  border-radius: 50%;
+  /* 
+  top - left,right
+  bottom - left,right
+  */
+  border-bottom-right-radius: 30px;
+}
+
+.display {
+  width: 150px;
+  height: 50px;
+  background-color: gold;
+  margin: 10px;
+}
+.display-inline {
+  display: inline;
+}
+.display-block {
+  display: block;
+}
+
+.display-inline-block {
+  display: inline-block;
+}
+
+.float {
+  width: 100px;
+  height: 100px;
+  border: 1px solid;
+  float: right;
+}
+/*
+    position : static(기본값),relative,absolute,fixed
+    -relative : 현재 원치에서 배치
+    -absolute : 부모 위치에서 배치
+    -fixed : 원하는 위치에 고정하여 배치
+*/
+#outer {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background-color: yellow;
+}
+#first {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 200px;
+  height: 200px;
+  background-color: orange;
+}
+#second {
+  position: absolute;
+  bottom: 100px;
+  right: 100px;
+  width: 100px;
+  height: 100px;
+  background-color: orangered;
+}
+
+#fixed {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 100px;
+  height: 100px;
+  background-color: skyblue;
+}
+
+.visibility {
+  width: 100px;
+  height: 100px;
+  border: 1px solid;
+}
+
+#vis1 {
+  /*
+        visibility : hidden / display :none;
+        -> 둘 다 화면에서 보여지지 않는 건 같지만
+        display : none; 운 영영 조차 없어진다.
+    */
+  /*visibility: hidden;*/
+  display: none;
+  background-color: beige;
+}
+#vis2 {
+  background-color: skyblue;
+}
+
+#z-outer {
+  position: relative;
+  height: 250px;
+  border: 1px solid;
+}
+.z-index {
+  width: 150px;
+  height: 150px;
+  border: 1px solid;
+  position: absolute;
+}
+
+#z-index1 {
+  background-color: orange;
+  top: 100px;
+  left: 100px;
+  z-index: 1;
+}
+#z-index2 {
+  background-color: blueviolet;
+  top: 50px;
+  left: 50px;
+  z-index: 9999999999;
+}
+#z-index3 {
+  background-color: green;
+  z-index: -1;
+}
