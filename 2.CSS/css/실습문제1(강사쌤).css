@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: gold;
+  background: linear-gradient(purple, orange, red, purple);
+  height: 100vh;
+  padding: 20px;
+}
+
+.profile-card {
+  text-align: center;
+  width: 320px;
+  border: 2px solid white;
+  border-radius: 5%;
+  margin: auto;
+  /*
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  */ /* 애는 뒤에서 배움 */
+}
+.profile-image {
+  background-image: url(../../resources/bao.jpg);
+  background-size: cover;
+  background-position: center;
+  margin: 20px auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.profile-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+.profile-card h2 {
+  color: white;
+  margin-top: 10px;
+}
+
+.profile-card a {
+  border: 2px solid white;
+  display: block;
+  margin: 15px;
+  /*
+  height: 40px;
+  line-height: 40px;
+  */
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.profile-card a:hover {
+  background-color: white;
+  color: black;
+}
