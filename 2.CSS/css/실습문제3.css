@@ -1,0 +1,41 @@
+div {
+  display: flex;
+}
+
+header {
+  background-image: url(/resources/background.jpg);
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  height: 100vh;
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px;
+}
+header h1 {
+  color: white;
+  font-size: 100px;
+  line-height: 130px;
+  border-bottom: 3px solid;
+}
+
+header nav {
+  display: flex;
+  flex-direction: column;
+}
+header nav a {
+  text-decoration: none;
+  color: white;
+  line-height: 50px;
+  font-size: 25px;
+}
+
+section {
+  padding-left: 500px;
+}
+section img {
+  width: 600px;
+}

@@ -1,0 +1,143 @@
+.box-container {
+  height: 50vh;
+  border: 1px solid;
+}
+#box-container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  width: 200px;
+  height: 200px;
+  border: 2px solid;
+  background-color: rgba(223, 78, 109, 0.8);
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /*transition : 시간 변환속성*/
+  transition: 0.1s linear;
+}
+.box:hover {
+  background-color: rgba(255, 152, 18, 0.733);
+  /*transform : 변형함수() */
+  /*scale : 지정한 크기만큼 확대/축소하는 함수*/
+  transform: scale(1.5);
+  /* rotate : 지정한 각도만큼 회전시키는 함수*/
+  transform: rotate(30deg);
+  /*skew : 지정한 각도만큼 비틀어 왜곡하는 함수*/
+  transform: skew(30deg);
+  transform: skewY(-30deg);
+  /*translate :x,y,z축 방향으로 이동시키는 함수*/
+  transform: translate(100px);
+  transform: translate(100px, 200px);
+  transform: scale(1.5) rotate(15deg);
+
+  /*tradsform-origin : 변형의 기준점을 변경하는 속성*/
+  transform-origin: left top;
+}
+
+/* animation */
+#box-container2 {
+  width: 1200px;
+  height: 600px;
+}
+.animation-box {
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+  border: 2px solid;
+  background-color: orange;
+  color: aliceblue;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*
+  animation: name duration iteration-count timing-function delay direction;
+    -name : 설정된 keyframe 지정
+    -duration : 실행 시간 지정
+    -iteration-count : 반복 횟수 지정
+    -timing-function : 속도 형태 지정
+    -delay : 대기 시간 지정
+    -direction : 진행 형태 지정
+  */
+  animation: boxAni 2s infinite reverse;
+  animation: boxAni 2s forwards;
+  animation: boxAni 3s infinite alternate;
+}
+.animation-box:hover {
+  background-color: yellow;
+  animation-play-state: paused;
+}
+/*
+    @keyframse 애니메이션 이름{
+        from{ 시작 프레임 설정}
+        to { 끝 프레임 설정 }
+        % { 단이로 지정 가능 }
+    }
+*/
+@keyframes boxAni {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(150px, 300px);
+  }
+  40% {
+    transform: translate(100px, 0px);
+  }
+  60% {
+    transform: translate(900px, 400px);
+  }
+  80% {
+    transform: translate(50px, 100px);
+  }
+  100% {
+    transform: translate(1000px, 0);
+  }
+}
+/* 3D */
+#box-container3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#box-container3:hover .card {
+  transform: rotateY(180deg);
+}
+.card {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform: rotateY(0deg);
+  transition: 1s;
+  transform-style: preserve-3d;
+}
+.card-item {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.card-item-front {
+  background-image: url(../../resources/images.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  backface-visibility: hidden;
+}
+
+.card-item-back {
+  background-color: rgb(255, 145, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 2rem;
+  color: white;
+  transform: rotateY(-180deg);
+}
