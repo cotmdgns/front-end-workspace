@@ -1,0 +1,41 @@
+body {
+  background: linear-gradient(45deg, orange, red, yellow, blue);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: flex;
+}
+.square {
+  width: 7px;
+  height: 50px;
+  background: white;
+  margin: 3px;
+  border-radius: 5px;
+  animation: squareScale 0.8s linear infinite;
+}
+.square:nth-child(2),
+.square:nth-child(6) {
+  animation-delay: 0.1s;
+}
+.square:nth-child(3),
+.square:nth-child(5) {
+  animation-delay: 0.2s;
+}
+.square:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+@keyframes squareScale {
+  0% {
+    transform: scaleY(0.5);
+  }
+  50% {
+    transform: scaleY(1.5);
+  }
+  100% {
+    transform: scaleY(0.5);
+  }
+}

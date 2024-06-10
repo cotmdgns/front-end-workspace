@@ -1,0 +1,15 @@
+body {
+  background-color: orange;
+}
+
+/* 700px 이상 적용 */
+@media screen and (min-width: 700px) {
+  body {
+    background: orangered;
+  }
+}
+@media screen and (min-width: 1000px) {
+  body {
+    background: yellowgreen;
+  }
+}
