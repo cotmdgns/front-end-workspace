@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배열</title>
+  </head>
+  <body>
+    <h1>배열</h1>
+    <p>하나의 변수에 여러 값을 저장</p>
+
+    <!-- const 배열 = [데이터, 데이터, 데이터, ...] -->
+    <script>
+      const arr = [1, 2, 3, 4, 5];
+      console.log(arr);
+      console.log(arr[2]); // 배열에서 2번째 값 : 3
+      console.log(arr.length);
+      console.log(arr[arr.length - 1]); // 배열에서 마지막번째 값 : 5
+
+      // 추가
+      arr.push(8); // 맨 뒤에 추가;
+      console.log(arr);
+
+      arr.unshift(0); // 맨 앞에 추가
+      console.log(arr);
+
+      // 배열.splice(index, 0, date) : 원하는 위치에 추가
+      arr.splice(4, 0, 9); // 4번째에 9라는 데이터 추가
+      console.log(arr);
+
+      //삭제
+      arr.pop(); // 맨 뒤에 데이터 삭제
+      console.log(arr);
+
+      arr.shift(); // 맨 앞에 데이터 삭제
+      console.log(arr);
+
+      // 배열.splice(index, 1) : 원하는 위치에 데이터 삭제
+      arr.splice(3, 1);
+      console.log(arr);
+
+      // 배열.splice(index, 1, data) : 원하는 위치에 데이터 수정
+      arr.splice(2, 1, 0); // 2번째에 위치하는 값 0으로 수정
+      console.log(arr);
+
+      // 인덱스 찾기 : indexof(데이터)
+      console.log(arr.indexOf(5));
+
+      // 정렬
+      const arr2 = [100, 2, 30, 50];
+      arr2.sort(); // 문자 정렬은 그래도 사용! 숫자 정렬 X
+      arr2.sort((a, b) => a - b);
+      console.log(arr2);
+
+      arr2.reverse(); // 거꾸로 정렬
+      console.log(arr2);
+    </script>
+
+    <!-- 배열과 문자열 -->
+    <script>
+      // 문자열 -> 배열 : split(구분자)
+      const strArr = "Hello, JavaScript!".split("");
+
+      // 배열 -> 문자열 : join(구분자)
+      const str = strArr.join("");
+      console.log(str);
+    </script>
+
+    <!-- 배열은 보통 빝 배열에서 시작 -->
+    <script>
+      const arr3 = [];
+      arr3.push(1);
+      arr3.push(3);
+      arr3[2] = 5;
+      arr3[0] = 7;
+      console.log(arr3);
+    </script>
+
+    <!-- slice(시작 인덱스, 끝 인덱스) -->
+    <script>
+      const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+      const result = numbers.slice(2, 5);
+      console.log(numbers);
+      console.log(result);
+    </script>
+
+    <!--    
+        구조 분해 할당
+        : 프로그래밍 언어에서 여러 값을 동시에 여러 변수에 할당하는 기술
+    -->
+    <script>
+      const character = ["짱구", "유리", "철수", "훈이", "맹구"];
+      console.log(character[character.indexOf("철수")]);
+
+      // 새로 생긴 방식
+      const [a, b, c, d, e] = character;
+      console.log(c);
+    </script>
+  </body>
+</html>

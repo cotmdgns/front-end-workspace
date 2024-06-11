@@ -21,8 +21,9 @@
            예) 킬로그램 : 60  
      -->
     <script>
-      let kgrem = 60.0;
-      console.log(kgrem * 2.2);
+      let kg = 60;
+      let lb = kg * 2.2;
+      console.log(lb);
     </script>
 
     <!--
@@ -31,8 +32,9 @@
            예) 제곱미터 : 99
     -->
     <script>
-      let zeqop = 99;
-      console.log(zeqop * 0.3);
+      const zeqop = 99;
+      const qwe = zeqop * 0.3;
+      console.log(qwe);
     </script>
 
     <!-- 
@@ -41,10 +43,11 @@
            예) 윗변 : 10, 밑변 : 14, 높이 : 4
      -->
     <script>
-      let a = 10;
-      let b = 14;
-      let c = 4;
-      console.log(((a + b) / 2) * c);
+      const upper = 10;
+      const lower = 14;
+      const height = 4;
+      const abc = ((upper + lower) / 2) * height;
+      console.log(abc);
     </script>
 
     <!-- 
@@ -53,16 +56,18 @@
            - 예) 정기 예금액 : 12,000,000
     -->
     <script>
-      let myMoney = 12000000;
-      console.log((myMoney * 0.04) / 12 + "원");
+      const myMoney = 12000000;
+      const monthly = (myMoney * 0.04) / 12;
+      console.log(monthly);
     </script>
 
     <!-- 
         Q5. 머쓱이는 55살인 선생님이 몇 년도에 태어났는지 궁금해졌다. 나이 age가 주어질 때, 2024년을 기준 출생 연도를 console에 출력하시오.
      -->
     <script>
-      let age = 55;
-      console.log(2024 - age + "년도");
+      const age = 55;
+      const year = 2024 - age;
+      console.log(year + "년생");
     </script>
 
     <!-- 
@@ -70,10 +75,12 @@
             머쓱이가 가지고 있는 돈이 15,000원 일 때, 머쓱이가 최대로 마실 수 있는 아메리카노의 잔 수와 남는 돈을 console에 출력하시오.
      -->
     <script>
-      let ice = 5500;
-      let Mussuce = 15000;
-      console.log(parseInt(Mussuce / ice) + "잔");
-      console.log("남은 돈 :" + (Mussuce % ice) + "원");
+      const ice = 5500;
+      const Mussuce = 15000;
+      const cups = parseInt(Mussuce / ice);
+      const janmoney = Mussuce % ice;
+      console.log(cups + "잔");
+      console.log("남은 돈 :" + janmoney + "원");
     </script>
 
     <!-- 
@@ -81,11 +88,20 @@
           양꼬치 64인분과 음료수 6개를 먹었다면 총얼마를 지불해야 하는지 console에 출력하시오.
      -->
     <script>
+      /*
       let gguchi = 12000;
       let tea = 2000;
       let chiTo = 64;
-      let teaTo = 6;
-      console.log((gguchi * chiTo + tea * teaTo)-());
+      let teaTo = parseInt(chiTo / 10);
+      let result = gguchi * chiTo;
+      console.log(result - (teaTo - parseInt(chiTo / 10)) * tea);
+      */
+      const chiTo = 64;
+      const teaTo = 6;
+      const service = parseInt(chiTo / 10);
+      const total = chiTo * 12000 + (teaTo - service) * 2000;
+
+      console.log(total);
     </script>
   </body>
 </html>

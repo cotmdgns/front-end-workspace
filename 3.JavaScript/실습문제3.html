@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Q1. 배열을 문자열로 변환하여 console에 출력하시오. -->
+    <script>
+      const tel = ["010", "1234", "5678"];
+      const str = tel.join("-");
+      console.log(str);
+      // 출력 예시 : 010-1234-5678
+    </script>
+
+    <!-- Q2. 배열 함수들 활용!-->
+    <script>
+      const scores = [85, 98, 99, 76, 82];
+
+      // 1)
+      scores.push(100);
+      console.log(scores); // [85, 98, 99, 76, 82, 100]
+
+      // 2)
+      scores.pop(100);
+      console.log(scores); // [85, 98, 99, 76, 82]
+
+      // 3)
+      scores.shift();
+      console.log(scores); // [98, 99, 76, 82]
+
+      // 4)
+      scores.splice(0, 4, 30, 76, 82);
+      console.log(scores); // [30, 76, 82]
+
+      // 5)
+      scores.splice(1, 2, 50);
+      console.log(scores); // [30, 50]
+    </script>
+
+    <!-- Q3. 해당 배열을 이용하여 출력 결과대로 나오게 구현하세요 -->
+    <script>
+      const music = ["가요", "팝송", "클래식", "재즈", "OST"];
+      const result1 = music.slice(1, 4);
+      const result2 = music.slice(4, 5);
+      console.log(result1);
+      console.log(result2);
+      // ['팝송', '클래식', '재즈']
+      // ['OST']
+    </script>
+
+    <!-- Q4. 해당 배열을 오름차순(작은 숫자 ~ 큰 숫자)으로 정렬해주세요  -->
+    <script>
+      const numbers = [7, -24, -8, 10, 17, -58];
+      numbers.sort((a, b) => a - b);
+      console.log(numbers);
+    </script>
+  </body>
+</html>
