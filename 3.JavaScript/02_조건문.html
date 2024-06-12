@@ -3,24 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>02_조건문</title>
+    <title>Document</title>
   </head>
   <body>
     <h1>조건문</h1>
     <!--
         if(조건) {
             조건이 true
-        }else{
+        } else {
             조건이 false
         }
 
         else 생략 가능!
-        한 줄 표현! 삼항 연산자 
-        => 조건 ? 조건이 true : 조건이 false
+        한 줄 표현! 삼항 연산자
+         => 조건 ? 조건이 true : 조건이 false
     -->
     <script>
       let age = 15;
-      //만약 19살 보다 많으면 성인이라고 출력!
+      // 만약 19살 보다 많으면 성인이라고 출력!
       // 그게 아니면 미성년자라고 출력!
       if (age > 19) {
         console.log("성인");
@@ -28,26 +28,28 @@
         console.log("미성년자");
       }
 
-      //삼항연산자로!
+      // 삼항연산자로!
       age = 20;
       const result = age > 19 ? "성인" : "미성년자";
       console.log(result);
     </script>
-    <!-- else if : 여러개 사용 
-        if(조건 A){
-            조건 A가 true
-        }else if(조건 B){
-            (조건 A가 false이면서) 조건 B가 true
-        }else{
 
+    <!-- else if : 여러개 사용 
+        if(조건 A) {
+            조건 A가 true
+        } else if(조건 B) {
+            (조건 A가 false이면서) 조건 B가 true
+        } else {
+            모든 조건이 false
         }
     -->
     <script>
-      age = 5;
+      age = 6;
       if (age > 19) {
         console.log("성인");
       } else if (age > 13) {
-        console.log("청소년"); // age > 13 && age <= 19
+        // age > 13 && age <= 19 : 비추천!
+        console.log("청소년");
       } else if (age > 7) {
         console.log("어린이");
       } else {
@@ -56,31 +58,33 @@
     </script>
 
     <!--
-      switch(데이터)
-        case 조건 A(값):
-          조건 A가 true
-          break;
-        case 조건 B(값):
-          조건 B가 true
-          break;
-        default :
-          모든 조건이 false
+      switch(데이터) {
+        case 조건 A(값) : 
+            조건 A가 true
+            break;
+        case 조건 B(값) : 
+            조건 B가 true
+            break;
+        default : 
+            모든 조건이 false
+      }
     -->
     <script>
       const number = prompt("숫자를 입력하세요");
-      console.log("71번째 줄 >> " + number);
-      // number 값이 짝수이면 짝수, 홀수이면 홀수 출력!
+      console.log("74번째 줄 >> " + number);
+      // number 값이 짝수이면 짝수(number % 2 === 0),
+      // 홀수이면 홀수(number % 2 === 1) 출력!
       // 그 외에는 숫자가 아닙니다 라고 출력!
-      // if문
+      // if 문
       if (number % 2 === 0) {
-        console.log("짝수 입니다");
+        console.log("짝수");
       } else if (number % 2 === 1) {
-        console.log("홀수 입니다");
+        console.log("홀수");
       } else {
         console.log("숫자가 아닙니다");
       }
 
-      //switch
+      // switch 문
       switch (number % 2) {
         case 0:
           console.log("짝수");

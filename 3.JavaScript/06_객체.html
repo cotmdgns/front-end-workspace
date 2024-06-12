@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>객체</title>
+  </head>
+  <body>
+    <h1>객체(Object)</h1>
+
+    <!-- 객체 생성 -->
+    <script>
+      const person1 = {};
+      const person2 = new Object(); /* 거의 안 씀! */
+
+      console.log(person1);
+      console.log(person2);
+
+      /* 변수 : 속성, 특징 등 추가 */
+      person1.name = "주준영";
+      person1.age = 9;
+      /* 함수 : 가능 등 추가 */
+      person1.hello = function () {
+        console.log(`안녕, 나는 ${this.name}이고 나이는 ${this.age}살! `);
+      };
+
+      console.log(person1);
+      console.log(person1.name); //person1의 name
+      person1.hello(); //person1의 hello
+
+      const person3 = {
+        name: "유영민",
+        age: 12,
+        hello: function () {
+          console.log(`안녕, 나는 ${this.name}이고 나이는 ${this.age}살! `);
+        },
+      };
+      console.log(person3.age);
+      person3.hello();
+
+      // 객체 속 키(key) 삭제
+      delete person3.hello;
+      //person3.hello();
+      console.log(person3);
+
+      /*
+        const 객체명 = {
+            키:값,
+            키:값,
+            ...
+        }
+        * 객채에 추가 & 수정
+          객체명.키 = 값;
+
+        * 데이터에 접근
+          객체명.키;  <== 속성인 경우
+          객체명.키();<== 함수인 경우
+      */
+    </script>
+    <!-- 틀 1 : 생성자(constructor) 함수 -->
+    <script>
+      function Person(name, age) {
+        this.name = name;
+        this.age = age;
+        this.hello = function () {
+          console.log(`안녕, 나는 ${this.name}이고 나이는 ${this.age}살! `);
+        };
+      }
+
+      const p1 = new Person("윤대훈", 15);
+      console.log(p1);
+      p1.hello();
+      const p2 = new Person("최제환", 11);
+      console.log(p2);
+      p2.hello();
+    </script>
+
+    <!-- 틀 2 : 클래스 -->
+    <script>
+      class Person2 {
+        // 생성자 -> 객체 생성하는 순간 바로 호출!
+        constructor(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+        hello() {
+          console.log(`안녕, 나는 ${this.name}이고 나이는 ${this.age}살! `);
+        }
+      }
+      const p3 = new Person2("공재욱", 8);
+      console.log(p3);
+      p3.hello();
+    </script>
+  </body>
+</html>
