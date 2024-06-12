@@ -114,10 +114,9 @@
     <script>
       function stringSplit() {
         const laList = la1.innerHTML.split(",");
-        /*
         for (const index in laList) {
           result3.innerHTML += `${Number(index) + 1}.${laList[index]}<br>`;
-        }*/
+       /*
         const ol = document.createElement("ol");
         for (const value of laList) {
           const li = document.createElement("li");
@@ -125,7 +124,10 @@
           ol.appendChild(li);
         }
         result3.appendChild(ol);
+       */
+        }
       }
+      
     </script>
 
     <hr />
@@ -168,6 +170,7 @@
       function arrayTest() {
         //preview, add, remove, result4
         const arr = preview.innerHTML.split(" ");
+    
         //배열에서 삭제할 값으로 삭제할 인덱스 찾기
         const index = arr.indexOf(remove.value);
 
@@ -178,6 +181,7 @@
         arr.push(add.value);
 
         result4.innerHTML = arr.join(" ");
+        
       }
     </script>
 
