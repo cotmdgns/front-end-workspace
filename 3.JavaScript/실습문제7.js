@@ -2,7 +2,6 @@
 const imges = document.querySelectorAll(".imges img");
 const span = document.querySelector("#click span");
 //리셋
-
 click.addEventListener("click", clickHandler); //click 아이디를 가져옴
 restart.addEventListener("click", restartHandler); // restart 아이디를 가져옴
 
