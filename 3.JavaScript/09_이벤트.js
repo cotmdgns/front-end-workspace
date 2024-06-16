@@ -23,7 +23,7 @@ for (let i = 0; i < img.length; i++) {
   });
 }
 
-/*
+
 // 이미지 다시 부르기
 const h2 = document.querySelector("h2");
 
@@ -32,7 +32,7 @@ h2.addEventListener("click", function () {
     img[i].style.display = "block";
   }
 });
-*/
+
 
 // 이미지 지우기 Ver2
 const container = document.querySelector(".container");

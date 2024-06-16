@@ -56,10 +56,10 @@ function btn8() {
 
 const div = document.querySelector("#testId2");
 function btn9() {
-  div.classList.add("black");
+  div.classList.add("red");
 }
 function btn10() {
-  div.classList.remove("black");
+  div.classList.remove("red");
 }
 function btn11() {
   const check = div.classList.contains("black");
