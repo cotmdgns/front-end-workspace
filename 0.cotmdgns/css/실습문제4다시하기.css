@@ -1,0 +1,43 @@
+body{
+    background: linear-gradient(30deg ,red,orange,yellow);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body p{
+    background-color: white;
+    width: 9px;
+    height: 70px;
+    margin: 2px;
+    border-radius: 100px;
+    animation: ani 1s linear infinite;
+}
+
+body p:nth-child(1),body p:nth-child(7){
+    
+}
+body p:nth-child(2),body p:nth-child(6){
+    animation-delay: 0.1s;
+}
+body p:nth-child(3),body p:nth-child(5){
+    animation-delay: 0.2s;
+}
+body p:nth-child(4){
+    animation-delay: 0.3s;
+}
+
+
+
+
+@keyframes ani{
+    0%{
+        transform: scaleY(1);
+    }
+    50%{
+        transform: scaleY(0.2);
+    }
+    100%{
+        transform: scaleY(1);
+    }
+}
