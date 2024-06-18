@@ -20,11 +20,6 @@ section div img {
   height: 200px;
 }
 
-#boxout {
-  width: 100px;
-  height: 100px;
-  background-color: aqua;
-}
 #box {
   background: linear-gradient(orange, white, orange);
   width: 100%;
