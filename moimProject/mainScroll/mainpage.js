@@ -48,3 +48,10 @@ $(".slider-1 > .side-btns > div").click(function () {
 setInterval(function () {
   $(".slider-1 > .side-btns > div").eq(1).click();
 }, 3000);
+
+
+/*top 버튼*/ 
+function clickme() {
+  const container = document.querySelector('.container');
+  container.scrollTo({ top: 0, behavior: 'smooth' });
+}
