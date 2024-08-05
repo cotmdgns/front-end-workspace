@@ -1,6 +1,6 @@
 header {
   width: 100%;
-  height: 100px;
+  height: 80px;
   position: fixed;
   z-index: 1000;
   box-shadow: 0px 0px 10px 0px;
@@ -12,7 +12,7 @@ header div {
   align-items: center;
 }
 header div div {
-  height: 100px;
+  height: 80px;
 }
 header div div img {
   height: 100%;
@@ -24,11 +24,14 @@ header div div img {
 }
 
 /*스크롤 이벤트 */
+
+
 .container {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh;
 }
+
 
 section {
   height: 100vh;
@@ -44,13 +47,27 @@ h1 {
 }
 
 .one {
-  background-color: rgb(36, 164, 138);
+  background-image: url(/resources/mainimg.png);
+  background-size: cover; 
+  background-position: center; 
 }
 .two {
   background-color: rgb(211, 79, 79);
 }
 .three {
+  padding-top: 100px;
   background-color: rgb(170, 187, 95);
+}
+.three div{
+  display: flex;  
+}
+.three div div {
+  width: 500px;
+  margin-right: 80px;
+  background-color: aqua;
+}
+.three div img{
+  width: 500px;
 }
 .four {
   background-color: rgb(27, 63, 224);
@@ -89,6 +106,11 @@ a {
 /* 커스텀 */
 
 /* 슬라이더 1 시작 */
+.twoheader{
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+}
 .slider-1 {
   margin: auto;
   top: 120px;
@@ -171,3 +193,18 @@ a {
   padding-top: 150px;
 }
 /* 슬라이더 1 끝 */
+
+
+
+/* top 버튼 */
+.goupbtn {
+  top: 93%;
+  left: 97%;
+  width: 50px;
+  height: 50px;
+  border-radius: 80%;
+  background-color: #ffffff;
+  border: red 3px solid;
+  position: fixed;
+  z-index: 2;
+}
