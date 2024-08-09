@@ -20,6 +20,9 @@ body .imges img {
   object-fit: cover;
   border-radius: 50%;
   padding: 15px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 button {

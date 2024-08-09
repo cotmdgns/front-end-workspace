@@ -32,6 +32,7 @@ $(function () {
   // 5. 속성선택자
   // 태그[속성] : 해당 태그의 속성을 가지는 요소
   $("#div1 input[class]").css("background-color", "turquoise");
+  //
   // 태그[속성=값] : 특정 속성과 값이 일치하는 요소
   $("#div1 input[type=text]").val("change value"); //val = value
   // 태그[속성*=값] : 속성의 값을 포함하는 요소
