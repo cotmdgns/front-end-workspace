@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      let count = 0;
+      const setCount = () => {
+        count++;
+        const h1 = React.createElement("h1", null, "Total Click : " + count);
+        const button = React.createElement(
+          "button",
+          { onClick: setCount },
+          "Click!"
+        );
+        const container = React.createElement("div", null, h1, button);
+        ReactDOM.render(container, root);
+      };
+
+      const root = document.querySelector("#root");
+      const h1 = React.createElement("h1", null, "Total Click : " + count); //테그, 클래스 , 텍스트
+      const button = React.createElement(
+        "button",
+        { onClick: setCount },
+        "Click!"
+      );
+      const container = React.createElement("div", null, h1, button); // 뒤에는 여러개 들어올 수 있다
+      ReactDOM.render(container, root); //첫번째 집어넣을꺼 , 두번째 어디가다 넣을건지
+    </script>
+  </body>
+</html>

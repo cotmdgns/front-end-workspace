@@ -19,9 +19,27 @@
     <!-- 시험범위 -->
     <h5>Spring</h5>
 
-    <h2>2. 아이디 선택자</h2>
-    <h3 id="id1">아이디 1</h3>
-    <h3 id="id2">아이디 2</h3>
+    <style>
+      @keyframes a {
+        0% {
+          transform: scaleY(0.3);
+          background-color: aqua;
+        }
+        50% {
+          transform: scaleY(1.5);
+          background-color: red;
+        }
+        100% {
+          transform: scaleY(0.3);
+          background-color: green;
+          background-image: center;
+          background-position: center;
+        }
+      }
+      .aa {
+        animation: a 1s linear infinite;
+      }
+    </style>
 
     <h2>3. 클래스 선택자</h2>
     <h3 class="item">클래스 1</h3>
