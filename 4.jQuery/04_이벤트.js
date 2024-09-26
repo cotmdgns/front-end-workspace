@@ -103,3 +103,4 @@ $("#area3").click(() => {
 $("#btn").click(() => {
   $("#area3").trigger("click");
 });
+

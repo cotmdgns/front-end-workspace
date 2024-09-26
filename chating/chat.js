@@ -1,3 +1,5 @@
-$("h5").css("color", "skyblue").css("background-color", "yellow");
-let w = 700;
-$("h5").css("width", w);
+$(function (){
+    $("h5").css("color", "skyblue").css("background-color", "yellow");
+    $("h2").css({color : "orange" , backgroundColor : "black"})
+    $("ul").css("color", "red")
+});
