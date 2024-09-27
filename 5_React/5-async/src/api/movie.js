@@ -21,5 +21,10 @@ export const getAwait = async () => {
 // axios는 Promise 기반 HTTP 클라이언트로, fetch보다 간결하고 많은 기능 제공
 // JSON 데이터 자동으로 파싱
 export const getAxios = async () => {
-  const response = await axios.get();
+  try {
+    const response = await axios.get("http://localhost:8080/api/movie");
+    return response.data; // 여기에 데이터 들어가있어서 data로 보내야함
+  } catch (error) {
+    console.log(error);
+  }
 };

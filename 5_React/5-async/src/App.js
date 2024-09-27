@@ -1,4 +1,4 @@
-import { getFetchThen, getAwait } from "./api/movie";
+import { getFetchThen, getAwait, getAxios } from "./api/movie";
 import { useEffect, useState } from "react";
 
 const App = () => {
@@ -18,11 +18,17 @@ const App = () => {
     setdata(result);
   };
 
+  const loadAxios = async () => {
+    const result = await getAxios();
+    setdata(result);
+  };
+
   useEffect(() => {
     //Promise {<pending>} 준비단계
-    console.log("준비단계 : " + getFetchThen());
+    //console.log("준비단계 : " + getFetchThen());
     //loadFetchThen();
-    loadAwait();
+    //loadAwait();
+    loadAxios();
   }, []);
   return (
     <>
